@@ -1,0 +1,45 @@
+package surprisetest21;
+import java.util.Scanner;
+
+public class Password_main {
+	
+	 @SuppressWarnings({ "resource", "unused" })
+	public static void main(String[] args) {
+		 
+		    Scanner sc = new Scanner(System.in);
+		    String x = sc.next();
+		    int i = 0;
+		    if (x.length() >= 8) {
+		      if (x.contains("#") || x.contains("_") || x.contains("@")) {
+		        char c = x.charAt(0);
+		        //System.out.println(c);
+		        if (Character.isAlphabetic(c)) {
+		          char p = x.charAt(x.length() - 1);
+		          
+		          if ((Character.isAlphabetic(p)) || (Character.isDigit(p)))
+
+		          {
+		            if (x.matches(".[0-9]{1,}.")
+		                || x.matches(".[a-zA-Z]{1,}.")) {
+
+		              System.out.println("Valid");
+
+		            } else{
+		              System.out.println("Not Valid");
+		            }
+		          } else{
+		            System.out.println("Not Valid");
+		          }
+		        }
+		         else{
+		            System.out.println("Not Valid");
+		          }
+		      } else{
+		        System.out.println("Not Valid");
+		      }
+
+		    } else{
+		      System.out.println("Not Valid");
+		    }
+		  }
+		}
