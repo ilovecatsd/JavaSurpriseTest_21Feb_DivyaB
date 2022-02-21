@@ -1,0 +1,23 @@
+package surprisetest21;
+
+import java.util.*;
+
+public class UserMainCode {
+	
+		  public static int calculateElectricityBill(String a, String b, int c) {
+		    int m1 = Integer.parseInt(a.substring(5, a.length()));
+		    int m2 = Integer.parseInt(b.substring(5, b.length()));
+		    int m = Math.abs((m2 - m1) * c);
+		    return m;
+		  }
+
+		  public static void main(String[] args) {
+		    @SuppressWarnings("resource")
+			Scanner sc = new Scanner(System.in);
+		    String x = sc.nextLine();
+		    String y = sc.nextLine();
+		    int z = sc.nextInt();
+		    int m1 = calculateElectricityBill(x, y, z);
+		    System.out.println(m1);
+		  }
+		}
